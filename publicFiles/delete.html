@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="myApp2" ng-controller="myController2" lang="en">
+	<head>
+	  <title>Item Catalogue</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,900|Oswald|Roboto+Condensed" rel="stylesheet">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="delete.js"></script>
+    <style>
+		h2 {
+			font-family: 'Oswald', sans-serif;
+		}
+		h3 {
+			font-family: 'Maven Pro', sans-serif;
+		}
+    p {
+      margin-top:5px;
+			font-family: 'Roboto Condensed', sans-serif;
+			/*font-family: 'Anton', sans-serif;*/
+    }
+		#p1 {
+			display:inline;
+			font-size:22px;
+		}
+		#p2 {
+			display:inline;
+			font-size:32px;
+		}
+    .t {
+      font-size:28px;
+      font-weight:bold;
+    }
+		a {
+			color:#8c8c8c;
+		}
+		a:hover {
+			color:#ffffff;
+			text-decoration:none;
+		}
+		nav a {
+			padding-right:10px;
+		}
+		#main_content {
+			text-align:center;
+		}
+    #bt1{
+      border:none;
+      height:2em;
+    }
+    #bt1:hover {
+      background-color:#4C576A!important;
+      font-weight:bold;
+      border:none;
+    }
+    input {
+      color:black;
+      margin-left:5px;
+    }
+		</style>
+	</head>
+
+	<body style="background-color:#343D4D">
+		<!--Title-->
+		<div style="background-color:rgba(0,0,0,0.5);height:4em">
+			<header>
+				<nav>
+					<table style="padding-top:1em" class="table" border="0">
+						<tr>
+				<td align="right">
+					<h2 id="p2" style="color:white"><a href="./">Item Catalogue</a></h2>
+				</td>
+				<td align="right">
+					<p id="p1"><a href="add.html">ADD</a></p>
+					<p id="p2"></p>
+					<p id="p1"><a style="color:#ffffff" href="delete.html">DELETE</a></p>
+				</td>
+			</tr>
+			</table>
+			</nav>
+		</header>
+		</div>
+    <table class="t" align="center" style="margin-top:1em;text-align:left;color:white" border=0>
+      <form align="center" ng-submit="delete()">
+      <tr>
+        <td>
+        <p>NameID:</p>
+      </td>
+      <td>
+        <input type="text" ng-model="nameID"></input>
+      </td>
+    </tr>
+      <tr>
+      <td style="background-color:#343D4D" colspan ="2">
+        <button id="bt1" style="background-color:#121E32;width:100%" type="submit">
+          <h3 style="margin-bottom:-2px;margin-top:-2px;color:white;font-size:24px">DELETE</h3>
+        </button>
+      </td>
+    </tr>
+        </form>
+  </table>
+  </body>
+</html>
